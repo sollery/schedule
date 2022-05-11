@@ -1,0 +1,122 @@
+.mytable {
+	width: 50%;
+	margin-bottom: 20px;
+	border: 1px solid #dddddd;
+	border-collapse: collapse;
+	text-align: center;
+}
+.mytable th {
+	font-weight: bold;
+	padding: 5px;
+	background: #efefef;
+	border: 1px solid #dddddd;
+}
+.mytable td {
+	border: 1px solid #dddddd;
+	padding: 5px;
+}
+
+.mytable tbody tr:nth-child(odd){
+	background: #fff;
+}
+.mytable tbody tr:nth-child(even){
+	background: #F7F7F7;
+}
+body {
+    font-size: 15px;
+    font-family: 'Raleway', sans-serif;
+    background-color: whitesmoke;
+}
+.container {
+        display: flex;
+        margin-top: 100px;
+        flex-direction: column;
+        align-items: center;
+
+}
+
+.myform {
+    align-items: center;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+.mytableinform {
+	width: 100%;
+	height: 100%;
+	margin-bottom: 20px;
+	border: 1px solid #dddddd;
+	border-collapse: collapse;
+	text-align: center;
+}
+.mytableinform th {
+	font-weight: bold;
+	padding: 5px;
+	background: #efefef;
+	border: 1px solid #dddddd;
+}
+.mytableinform td {
+	border: 1px solid #dddddd;
+	padding: 5px;
+}
+
+.mytableinform tbody tr:nth-child(odd){
+	background: #fff;
+}
+.mytableinform tbody tr:nth-child(even){
+	background: #F7F7F7;
+}
+
+#button {
+  display: inline-block;
+  font-family: arial,sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(68,68,68);
+  text-decoration: none;
+  user-select: none;
+  padding: .2em 1.2em;
+  outline: none;
+  border: 1px solid rgba(0,0,0,.1);
+  border-radius: 2px;
+  background: rgb(245,245,245) linear-gradient(#f4f4f4, #f1f1f1);
+  transition: all .218s ease 0s;
+}
+#button :hover {
+  color: rgb(24,24,24);
+  border: 1px solid rgb(198,198,198);
+  background: #f7f7f7 linear-gradient(#f7f7f7, #f1f1f1);
+  box-shadow: 0 1px 2px rgba(0,0,0,.1);
+}
+#button :active {
+  color: rgb(51,51,51);
+  border: 1px solid rgb(204,204,204);
+  background: rgb(238,238,238) linear-gradient(rgb(238,238,238), rgb(224,224,224));
+  box-shadow: 0 1px 2px rgba(0,0,0,.1) inset;
+}
+a {
+    display: inline-block;
+    position: relative;
+    padding-left: 6px;
+    /* Font styles */
+    text-decoration: none;
+    color: #6AB3EC;
+    text-shadow: 0 1px 1px rgba(255,255,255,0.9);
+}
+
+a:hover {
+    color: #3C9CE7;
+}
+
+a:before {
+    content: "\25BA";
+    font-size: 80%;
+    display: inline-block;
+    padding-right: 3px;
+    pointer-events: none;
+}
+
+a:hover:before {
+    color: #F2BF97;
+}
+

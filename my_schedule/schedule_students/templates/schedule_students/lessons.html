@@ -1,0 +1,35 @@
+
+
+{% extends "schedule_students/base.html" %}
+
+{% load static %}
+{%block title%}
+    Расписание
+{%endblock%}
+
+
+{%block content%}
+<h1>Расписание занятий</h1>
+    <table class="mytable">
+
+        <thead class="table-dark">
+            <tr>
+                    <th>Дата</th>
+                    <th>Предмет</th>
+                    <th>Преподаватель</th>
+                    <th>Подробнее</th>
+            </tr>
+        </thead>
+        <tbody>
+                {% for les in lesson_tb %}
+                <tr>
+                    <td>{{les.date}}</td>
+                    <td>{{les.subject.title}}</td>
+                    <td>{{les.subject.teacher}}</td>
+                    <td><a href="{% url 'put_marks' les.id %}">Перейти к уроку</a></td>
+                </tr>
+                {% endfor %}
+        </tbody>
+    </table>
+    <a href="{% url 'main' %}">Вернуться на главную</a>
+{%endblock%}

@@ -1,0 +1,39 @@
+{% extends "schedule_students/base.html" %}
+
+{% load static %}
+{%block title%}
+    Журнал
+{%endblock%}
+
+
+{%block content%}
+<h1>Журнал студентов</h1>
+<h4>{{error}}</h4>
+<form method="POST" class="myform">
+    {% csrf_token %}
+    <table class="mytableinform">
+        <thead>
+            <tr>
+                <th>Студент</th>
+                <th>Оценка</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for stud in students %}
+            <tr>
+                <td>{{stud.name}}</td>
+                <td>
+                    <select class="form-select" aria-label="Disabled select example"  name={{stud.id}}>
+                        {% for mark in marks %}
+                            <option>{{mark}}</option>
+                        {% endfor%}
+                    </select>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+<input id = 'button' type="submit" value="Поставить оценку">
+</form>
+<a href="{% url 'main' %}" >Вернуться на главную</a>
+{%endblock%}

@@ -1,0 +1,13 @@
+{% extends "schedule_students/base.html" %}
+
+{% load static %}
+{%block title%}
+    Главная страница
+{%endblock%}
+
+
+{%block content%}
+            <h1>Главная страница</h1>
+            <a href="{% url 'schedule'%}" >Расписание занятий</a>
+            <a href="{% url 'performance' %}" >Успеваемость студентов</a>
+{%endblock%}

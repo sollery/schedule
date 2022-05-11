@@ -1,0 +1,35 @@
+{% extends "schedule_students/base.html" %}
+
+{% load static %}
+{%block title%}
+    Показатели студентов
+{%endblock%}
+
+
+{%block content%}
+<h1>Показатели студентов</h1>
+    <table class="mytable">
+        <thead>
+            <tr>
+                <th>Студент</th>
+                <th>Средний бал</th>
+                <th>Все оценки</th>
+
+            </tr>
+    </thead>
+    <tbody>
+        {% for val in student_rating %}
+    <tr>
+        <td>{{val.name}}</td>
+        {% if val.total != None %}
+            <td>{{val.total}}</td>
+        {% else %}
+            <td>{{empty}}</td>
+        {%endif%}
+        <td><a href="{% url 'performance_stud' val.id %}"  >Перейти</a></td>
+    </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+    <a href="{% url 'main' %}" >Вернуться на главную</a>
+{%endblock%}
