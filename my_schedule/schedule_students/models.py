@@ -51,9 +51,8 @@ class Mark(models.Model):
     def __str__(self):
         return f'{self.student.name} {self.lesson} {self.value}'
 
-
     class Meta:
         verbose_name = 'Оценка'
         verbose_name_plural = 'Оценки'
-
+        unique_together = ['student', 'lesson']
 # Create your models here.

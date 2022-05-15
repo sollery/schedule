@@ -12,3 +12,10 @@ urlpatterns = [
     path('performance/',views.performance_show,name='performance'),
     path('performance/<int:stud_id>/', views.performance_stud_show, name='performance_stud'),
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+
+if settings.DEBUG:
+    import debug_toolbar
+    urlpatterns = [
+        path('__debug__/', include(debug_toolbar.urls)),
+    ] + urlpatterns

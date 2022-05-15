@@ -19,16 +19,20 @@
             </tr>
         </thead>
         <tbody>
-            {% for stud in students %}
+            {% for k,v in students_mark.items %}
             <tr>
-                <td>{{stud.name}}</td>
-                <td>
-                    <select class="form-select" aria-label="Disabled select example"  name={{stud.id}}>
-                        {% for mark in marks %}
-                            <option>{{mark}}</option>
-                        {% endfor%}
-                    </select>
+                <td>{{k.0}}</td>
+                {% if v != None %}
+                    <td>{{v}}</td>
+                {%else%}
+                    <td>
+                        <select class="form-select" aria-label="Disabled select example"  name={{k.1}}>
+                            {% for mark in marks %}
+                                <option>{{mark}}</option>
+                            {% endfor%}
+                        </select>
                 </td>
+             {%endif%}
             </tr>
             {% endfor %}
         </tbody>
