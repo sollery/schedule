@@ -6,3 +6,4 @@ admin.site.register(Lesson)
 admin.site.register(Subject)
 admin.site.register(Mark)
 
+

@@ -1,0 +1,9 @@
+{% extends 'news/base.html' %}
+{% block title %}main_news{% endblock title %}
+{% block content %}
+    {% for news in object_list %}
+        <h2><a href="{% url 'news_detail' news.id %}">{{ news.title }}</a></h2>
+        <p>{{ news.body }}</p>
+    {% endfor %}
+    <a href="{% url 'news_create' %}">Create News</a>
+{% endblock content %}
